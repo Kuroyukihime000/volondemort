@@ -1,3 +1,5 @@
+#Created by Gorbik, blaze-moto, kuroykihime
+
 import math
 import matplotlib.pyplot as plt
 import numpy as np
