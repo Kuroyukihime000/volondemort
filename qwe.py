@@ -44,3 +44,36 @@ def plot_function():
         plt.show()
     except Exception as e:
         print(f"Ошибка при построении графика: {e}")
+
+def main():
+    while True:
+        print("\n=== Математический калькулятор ===")
+        print("1. Площадь круга")
+        print("2. Площадь прямоугольника")
+        print("3. Площадь треугольника")
+        print("4. Логарифм")
+        print("5. Факториал")
+        print("6. Построить график функции")
+        print("7. Выход")
+        choice = input("Выберите действие: ").strip()
+
+        if choice == "1":
+            area_circle()
+        elif choice == "2":
+            area_rectangle()
+        elif choice == "3":
+            area_triangle()
+        elif choice == "4":
+            compute_log()
+        elif choice == "5":
+            compute_factorial()
+        elif choice == "6":
+            plot_function()
+        elif choice == "7":
+            print("До встречи!")
+            break
+        else:
+            print("Неверный выбор.")
+
+if __name__ == "__main__":
+    main()
