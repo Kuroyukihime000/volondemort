@@ -1,4 +1,7 @@
 import math
+import matplotlib.pyplot as plt
+import numpy as np
+import math
 
 def area_circle():
     r = float(input("Введите радиус круга: "))
@@ -26,3 +29,18 @@ def compute_log():
 def compute_factorial():
     n = int(input("Введите целое число: "))
     print(f"{n}! = {math.factorial(n)}")
+
+
+def plot_function():
+    expr = input("Введите выражение от x (например: x**2 - 3*x + 2): ")
+    x = np.linspace(-10, 10, 400)
+    try:
+        y = eval(expr, {"x": x, "math": math, "np": np})
+        plt.plot(x, y)
+        plt.title(f"График функции: {expr}")
+        plt.xlabel("x")
+        plt.ylabel("y")
+        plt.grid(True)
+        plt.show()
+    except Exception as e:
+        print(f"Ошибка при построении графика: {e}")
